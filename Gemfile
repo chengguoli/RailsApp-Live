@@ -10,10 +10,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 2.1'         group: :doc
 gem 'spring',        group: :development
 gem 'paperclip', '~> 5.2.0'
-gem 'aws-sdk', '~> 1.36.1'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.2'
 gem 'fog'
 gem 'devise', '~> 4.8.0'
 gem 'bootstrap-sass', '~> 3.4.1'
