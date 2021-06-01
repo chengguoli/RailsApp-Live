@@ -32,12 +32,12 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 2.2.0',          group: :doc
 # Easy upload management for ActiveRecord
 gem 'paperclip', '~> 6.1'
-# AWS Cloud Service
-gem 'fog-aws', '~> 3.10'
-gem 'aws-sdk', '~> 1.36.1'
+# AWS Cloud Service, Seems that it isn't used in this website
+# gem 'fog-aws', '~> 3.10'
+# gem 'aws-sdk', '~> 1.36.1'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.8'
 
@@ -45,7 +45,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'autoprefixer-rails','9.6.3'
 gem 'rails_admin', '1.4.3'
 
-gem 'cancan','1.6.10'
+gem 'cancancan','3.2.2'
 gem 'figaro'
 gem 'ckeditor','5.1.0'
 gem 'friendly_id', '~> 5.4.2'
@@ -61,7 +61,6 @@ gem 'whenever', :require => false
 gem 'kaminari'
 gem 'acts-as-taggable-on', '5.0.0'
 gem 'mini_racer', '~> 0.4.0'
-
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
