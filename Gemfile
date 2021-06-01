@@ -1,65 +1,102 @@
-source 'https://rubygems.org/'
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.8'
-gem 'rails', '~> 5.2', '>= 5.2.4.6'
-gem 'pg'
-gem 'sass-rails', '~> 6.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 5.0.0'
-gem 'jquery-rails'
-gem 'turbolinks'
+ruby '2.7.3'
+
+gem 'bigdecimal', '1.3.5'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+gem 'rails', '4.2.11'
+# Use Passenger as the app server
+# gem 'passenger', '~> 6.0', '>= 6.0.8'
+# Use SCSS for stylesheets
+gem 'sass-rails'
+# Uglifier minifies JavaScript files by wrapping UglifyJS to be accessible in Ruby
+gem 'uglifier', '~> 4.2'
+# CoffeeScript adapter for the Rails asset pipeline.
+gem 'coffee-rails', '4.2.2'
+# This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application
+gem 'jquery-rails', '~> 4.4'
+
+gem 'nprogress-rails', '~> 0.2.0.2'
+
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
 gem 'jquery-turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 2.1'         group: :doc
-gem 'spring',        group: :development
-gem 'paperclip', '~> 5.2.0'
-gem 'aws-sdk', '~> 3.0', '>= 3.0.2'
-gem 'fog'
-gem 'devise', '~> 4.8.0'
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'autoprefixer-rails','~> 5.2.1'
-gem 'nprogress-rails'
-gem 'cancan'
-gem 'rails_admin', '~> 2.1', '>= 2.1.1'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.7'
+# Use Redis adapter to run Action Cable in production
+# gem 'redis', '~> 4.0'
+# Use Active Model has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
+
+# Use Active Storage variant
+# gem 'image_processing', '~> 1.2'
+gem 'sdoc', '~> 0.4.0',          group: :doc
+# Easy upload management for ActiveRecord
+gem 'paperclip', '~> 6.1'
+# AWS Cloud Service
+gem 'fog-aws', '~> 3.10'
+gem 'aws-sdk', '~> 1.36.1'
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.8'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails','9.6.3'
+gem 'rails_admin', '1.4.3'
+
+gem 'cancan','1.6.10'
 gem 'figaro'
-gem 'ckeditor'
-gem 'friendly_id', '~> 5.0.0'
-gem 'phrasing'
-gem 'nokogiri', '>= 1.11.4'
-gem 'omniauth-rails_csrf_protection'
-gem 'rake', '>= 12.3.3'
-# gem 'sunspot_rails'  ###SOLR
-# gem 'progress-bar'
+gem 'ckeditor','5.1.0'
+gem 'friendly_id', '~> 5.4.2'
+# Phrasing is a gem for live editing phrases (copy) on websites.
+gem 'phrasing', '~> 4.3', '>= 4.3.2'
+gem 'nokogiri', '1.11.6'
 
 gem 'jquery-fileupload-rails', '~> 0.4.7'
 # gem 'globalize', '~> 4.0.2'
+gem 'ransack','1.8.10'
 gem 'whenever', :require => false
-gem 'ransack', '~> 2.3.0'
-gem 'kaminari'
-gem 'acts-as-taggable-on', '~> 6.0'
-gem 'therubyracer'
-gem 'mysql2','~>0.3.18'
 
+gem 'kaminari'
+gem 'acts-as-taggable-on', '5.0.0'
+gem 'mini_racer', '~> 0.4.0'
+
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.4', require: false
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-facebook'
 
-group :test, :development do
+
+group :development, :test do
+  gem 'sqlite3', '1.4.2'
   gem 'rspec-rails', '~> 3.5.0'
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darvin/i
   gem 'launchy'
 #  gem 'bullet',require: true
   # gem 'sunspot_solr' ###SOLR
-  gem 'capybara'
+  gem 'capybara', '3.14.0'
   gem 'guard-rspec', require: false
-end
 
+end
 gem 'state_machine'
 gem 'rails_admin_state'
 
+
 group :development do
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  # gem 'pg'
   gem 'guard-livereload', require: false
   gem 'i18n-tasks', '~> 0.7.11'
+
 end
 gem 'seed_dump'
 gem 'bootstrap-datepicker-rails'
+gem 'mysql2','0.4.4'
+
+
+
