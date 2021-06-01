@@ -41,7 +41,7 @@ gem 'aws-sdk', '~> 1.36.1'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.8'
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'autoprefixer-rails','9.6.3'
 gem 'rails_admin', '1.4.3'
 
