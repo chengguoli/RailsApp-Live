@@ -1,3 +1,3 @@
 # SampleRailsApp
 
-Gemfile and Gemfile.lock
+Gemfile and Gemfile.lock for Dependabot altert
