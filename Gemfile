@@ -6,9 +6,7 @@ ruby '2.7.3'
 gem 'bigdecimal', '1.3.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '5.2.6'
-# Boot rails apps faster
-gem 'bootsnap', '~> 1.7', '>= 1.7.7'
+gem 'rails', '4.2.11.3'
 # Use Passenger as the app server
 # gem 'passenger', '~> 6.0', '>= 6.0.8'
 # Use SCSS for stylesheets
@@ -18,7 +16,7 @@ gem 'uglifier', '~> 4.2'
 # CoffeeScript adapter for the Rails asset pipeline.
 gem 'coffee-rails', '4.2.2'
 # This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.4'
 
 gem 'nprogress-rails', '~> 0.2.0.2'
 
@@ -44,10 +42,8 @@ gem 'paperclip', '~> 6.1'
 gem 'devise', '~> 4.8'
 
 gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
-
 gem 'autoprefixer-rails','9.6.3'
-gem 'rails_admin', '~> 2.2', '>= 2.2.1'
+gem 'rails_admin'
 
 gem 'cancancan','3.2.2'
 gem 'figaro'
@@ -56,7 +52,7 @@ gem 'friendly_id', '~> 5.4.2'
 # Phrasing is a gem for live editing phrases (copy) on websites.
 gem 'phrasing', '~> 4.3', '>= 4.3.2'
 gem 'nokogiri', '1.13.2'
-gem 'mysql2', '~> 0.5.0'
+
 gem 'jquery-fileupload-rails', '~> 0.4.7'
 # gem 'globalize', '~> 4.0.2'
 gem 'ransack'
@@ -66,8 +62,10 @@ gem 'kaminari'
 gem 'acts-as-taggable-on', '5.0.0'
 gem 'mini_racer', '~> 0.4.0'
 
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'omniauth'
-gem 'omniauth-oauth2', '~> 1.6'
+gem 'omniauth-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-weibo-oauth2'
 
@@ -86,6 +84,7 @@ end
 gem 'state_machine'
 gem 'rails_admin_state'
 
+
 group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -97,6 +96,7 @@ group :development do
 end
 gem 'seed_dump'
 gem 'bootstrap-datepicker-rails'
+gem 'mysql2','0.4.4'
 
 
 
