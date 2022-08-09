@@ -1,14 +1,15 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.3'
+ruby '2.7.3', :patchlevel=>'183'
 
 gem 'bigdecimal', '1.3.5'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '4.2.11.3'
+gem 'rails', '~>6.0.5.1'
+# Boot rails apps faster
+gem 'bootsnap', '~> 1.7', '>= 1.7.7'
 # Use Passenger as the app server
-# gem 'passenger', '~> 6.0', '>= 6.0.8'
+#gem 'passenger', '>= 5.3.2', require: 'phusion_passenger/rack_handler'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Uglifier minifies JavaScript files by wrapping UglifyJS to be accessible in Ruby
@@ -16,7 +17,7 @@ gem 'uglifier', '~> 4.2'
 # CoffeeScript adapter for the Rails asset pipeline.
 gem 'coffee-rails', '4.2.2'
 # This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application
-gem 'jquery-rails', '~> 4.4'
+gem 'jquery-rails'
 
 gem 'nprogress-rails', '~> 0.2.0.2'
 
@@ -42,8 +43,10 @@ gem 'paperclip', '~> 6.1'
 gem 'devise', '~> 4.8'
 
 gem 'bootstrap-sass', '~> 3.4.1'
-gem 'autoprefixer-rails','9.6.3'
-gem 'rails_admin'
+gem 'sassc-rails', '>= 2.1.0'
+
+gem 'autoprefixer-rails'
+gem 'rails_admin', '~> 2.2', '>= 2.2.1'
 
 gem 'cancancan','3.2.2'
 gem 'figaro'
@@ -51,21 +54,20 @@ gem 'ckeditor','5.1.0'
 gem 'friendly_id', '~> 5.4.2'
 # Phrasing is a gem for live editing phrases (copy) on websites.
 gem 'phrasing', '~> 4.3', '>= 4.3.2'
-gem 'nokogiri', '~>1.13.4'
-
+gem 'nokogiri','~>1.13.6'
+gem 'mysql2', '~> 0.5.0'
 gem 'jquery-fileupload-rails', '~> 0.4.7'
 # gem 'globalize', '~> 4.0.2'
-gem 'ransack'
+gem 'ransack','~>3.0.1'
 gem 'whenever', :require => false
 
 gem 'kaminari'
 gem 'acts-as-taggable-on', '5.0.0'
 gem 'mini_racer', '~> 0.4.0'
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
-# gem 'omniauth'
-gem 'omniauth-oauth2'
+gem 'omniauth'
+gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-oauth2', '~> 1.7'
 gem 'omniauth-facebook'
 gem 'omniauth-weibo-oauth2'
 
@@ -84,7 +86,6 @@ end
 gem 'state_machine'
 gem 'rails_admin_state'
 
-
 group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -96,7 +97,6 @@ group :development do
 end
 gem 'seed_dump'
 gem 'bootstrap-datepicker-rails'
-gem 'mysql2','0.4.4'
 
 
 
